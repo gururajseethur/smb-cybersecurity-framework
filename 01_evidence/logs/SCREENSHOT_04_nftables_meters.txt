@@ -1,0 +1,55 @@
+--- ruleset loaded ---
+table inet meridian {
+	set blackhole {
+		type ipv4_addr
+		flags timeout
+	}
+
+	set synflood {
+		type ipv4_addr
+		size 65535
+		flags dynamic
+	}
+
+	set icmpflood {
+		type ipv4_addr
+		size 65535
+		flags dynamic
+	}
+
+	chain input {
+		type filter hook input priority filter; policy accept;
+		tcp flags syn add @synflood { ip saddr limit rate over 25/second burst 50 packets } counter packets 0 bytes 0 drop
+		ip protocol icmp icmp type echo-request add @icmpflood { ip saddr limit rate over 10/second burst 20 packets } counter packets 0 bytes 0 drop
+	}
+}
+
+--- generating ICMP flood to trigger meter ---
+--- counters after flood ---
+table inet meridian {
+	set blackhole {
+		type ipv4_addr
+		flags timeout
+	}
+
+	set synflood {
+		type ipv4_addr
+		size 65535	# count 2
+		flags dynamic
+		elements = { 10.1.62.193 limit rate over 25/second burst 50 packets, 127.0.0.1 limit rate over 25/second burst 50 packets }
+	}
+
+	set icmpflood {
+		type ipv4_addr
+		size 65535	# count 1
+		flags dynamic
+		elements = { 127.0.0.1 limit rate over 10/second burst 20 packets }
+	}
+
+	chain input {
+		type filter hook input priority filter; policy accept;
+		tcp flags syn add @synflood { ip saddr limit rate over 25/second burst 50 packets } counter packets 0 bytes 0 drop
+		ip protocol icmp icmp type echo-request add @icmpflood { ip saddr limit rate over 10/second burst 20 packets } counter packets 342 bytes 28728 drop
+	}
+}
+[sudo: authenticate] Password: 

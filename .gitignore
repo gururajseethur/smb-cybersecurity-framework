@@ -1,0 +1,27 @@
+# ── Personal / submission-only (kept local, NOT published) ──
+SUBMISSION_EMAIL.txt
+DEFENSE_QA_CHEATSHEET.md
+
+# ── Build / dev artifacts ──
+*.html
+_*.py
+__pycache__/
+*.pyc
+
+# ── OS / editor junk ──
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+*.swp
+*~
+.vscode/
+.idea/
+
+# ── Secrets (defense-in-depth; repo already contains none) ──
+# NOTE: patterns kept narrow so legitimate docs like 01_password_policy.md are NOT excluded
+*.key
+*.pem
+id_rsa*
+.env
+.env.*

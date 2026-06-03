@@ -1,0 +1,52 @@
+Starting Nmap 7.98 ( https://nmap.org ) at 2026-06-02 13:40 +0000
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.000070s latency).
+
+PORT    STATE  SERVICE VERSION
+22/tcp  open   ssh     OpenSSH 10.2p1 Ubuntu 2ubuntu3.2 (Ubuntu Linux; protocol 2.0)
+| vulners: 
+|   cpe:/a:openbsd:openssh:10.2p1: 
+|     	CVE-2026-35414	8.1	https://vulners.com/cve/CVE-2026-35414
+|     	CVE-2026-35386	8.1	https://vulners.com/cve/CVE-2026-35386
+|     	CVE-2026-35385	8.1	https://vulners.com/cve/CVE-2026-35385
+|     	CVE-2026-35387	6.5	https://vulners.com/cve/CVE-2026-35387
+|_    	CVE-2026-35388	2.5	https://vulners.com/cve/CVE-2026-35388
+80/tcp  open   http    Apache httpd
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-server-header: Apache
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+| http-enum: 
+|_  /robots.txt: Robots file
+443/tcp closed https
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.98%E=4%D=6/2%OT=22%CT=443%CU=37611%PV=Y%DS=0%DC=L%G=Y%TM=6A1EDD
+OS:7F%P=x86_64-pc-linux-gnu)SEQ(CI=Z%TS=20)SEQ(SP=102%GCD=1%ISR=109%TI=Z%CI
+OS:=Z%II=I%TS=22)SEQ(SP=106%GCD=1%ISR=109%TI=Z%CI=Z%TS=21)SEQ(SP=107%GCD=1%
+OS:ISR=106%TI=Z%CI=Z%II=I%TS=20)SEQ(SP=107%GCD=1%ISR=108%TI=Z%CI=Z%II=I%TS=
+OS:21)OPS(O1=MFFD7ST11NW9%O2=MFFD7ST11NW9%O3=MFFD7NNT11NW9%O4=MFFD7ST11NW9%
+OS:O5=MFFD7ST11NW9%O6=MFFD7ST11)WIN(W1=FFCB%W2=FFCB%W3=FFCB%W4=FFCB%W5=FFCB
+OS:%W6=FFCB)ECN(R=Y%DF=Y%T=40%W=FFD7%O=MFFD7NNSNW9%CC=Y%Q=)T1(R=Y%DF=Y%T=40
+OS:%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=
+OS:%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%
+OS:W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=
+OS:)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%
+OS:DFI=N%T=40%CD=S)
+
+Network Distance: 0 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 50.67 seconds
+
+--- service/version summary ---
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 10.2p1 Ubuntu 2ubuntu3.2 (Ubuntu Linux; protocol 2.0)
+80/tcp open  http    Apache httpd
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+PORT   STATE         SERVICE
+22/tcp open|filtered ssh
+80/tcp open|filtered http
+[sudo: authenticate] Password: 

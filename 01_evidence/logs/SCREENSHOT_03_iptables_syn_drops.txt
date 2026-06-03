@@ -1,0 +1,5 @@
+Chain SYN_FLOOD (1 references)
+ pkts bytes target     prot opt in     out     source               destination         
+   71  2900 RETURN     all  --  *      *       0.0.0.0/0            0.0.0.0/0            limit: avg 25/sec burst 50
+ 1935 77460 LOG        all  --  *      *       0.0.0.0/0            0.0.0.0/0            LOG flags 0 level 4 prefix "IPT-SYNFLOOD-DROP: "
+ 1935 77460 DROP       all  --  *      *       0.0.0.0/0            0.0.0.0/0           

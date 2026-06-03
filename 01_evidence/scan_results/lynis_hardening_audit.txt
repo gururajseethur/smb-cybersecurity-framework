@@ -1,0 +1,41 @@
+--- Hardening index + key results ---
+  Lynis modules:
+  Hardening index : 61 [############        ]
+  Tests performed : 265
+
+--- Section results (sample) ---
+[2C- Detecting OS... [41C [ DONE ]
+[2C- Checking profiles...[37C [ DONE ]
+[4C- Checking /bin... [38C [ FOUND ]
+[4C- Checking /sbin... [37C [ FOUND ]
+[4C- Checking /usr/bin... [34C [ FOUND ]
+[4C- Checking /usr/sbin... [33C [ FOUND ]
+[4C- Checking /usr/local/bin... [28C [ FOUND ]
+[4C- Checking /usr/local/sbin... [27C [ FOUND ]
+[2C- Checking presence GRUB2[34C [ FOUND ]
+[2C- Check running services (systemctl)[23C [ DONE ]
+[2C- Check enabled services at boot (systemctl)[15C [ DONE ]
+[2C- Check startup files (permissions)[24C [ OK ]
+[4CCPU support: PAE and/or NoeXecute supported[14C [ FOUND ]
+[2C- Checking kernel version and release[22C [ DONE ]
+[2C- Checking kernel type[37C [ DONE ]
+[2C- Checking loaded kernel modules[27C [ DONE ]
+[2C- Checking Linux kernel configuration file[17C [ FOUND ]
+[2C- Checking for available kernel update[21C [ OK ]
+[2C- Checking /proc/meminfo[35C [ FOUND ]
+[2C- Administrator accounts[35C [ OK ]
+[2C- Unique UIDs[46C [ OK ]
+[2C- Consistency of group files (grpck)[23C [ OK ]
+[2C- Unique group IDs[41C [ OK ]
+[2C- Unique group names[39C [ OK ]
+[2C- Password file consistency[32C [ OK ]
+
+--- Warnings ---
+  Warnings (3):
+  ----------------------------
+  ! iptables module(s) loaded, but no rules active [FIRE-4512] 
+      https://cisofy.com/lynis/controls/FIRE-4512/
+
+--- Hardening index (final) ---
+  Hardening index : 61 [############        ]
+[sudo: authenticate] Password: 

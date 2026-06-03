@@ -1,0 +1,52 @@
+i: suricata: This is Suricata version 8.0.3 RELEASE running in USER mode
+i: mpm-hs: Rule group caching - loaded: 0 newly cached: 0 total cacheable: 0
+i: threads: Threads created -> RX: 1 W: 2 FM: 1 FR: 1   Engine started.
+i: suricata: Signal Received.  Stopping engine.
+i: pcap: read 1 file, 4349 packets, 750358 bytes
+
+--- Named alerts from local + ET rules (checksum noise excluded) ---
+      1 06/02/2026-13:39:42.588859  [**] [1:1000005:1] LOCAL MongoDB Access Attempt (exposed DB) [**] [Classification: (null)] [Priority: 3] {TCP} 127.0.0.1:38252 -> 127.0.0.1:27017
+      1 06/02/2026-13:39:37.104655  [**] [1:1000005:1] LOCAL MongoDB Access Attempt (exposed DB) [**] [Classification: (null)] [Priority: 3] {TCP} 127.0.0.1:43794 -> 127.0.0.1:27017
+      1 06/02/2026-13:39:57.487413  [**] [1:1000005:1] LOCAL MongoDB Access Attempt (exposed DB) [**] [Classification: (null)] [Priority: 3] {TCP} 127.0.0.1:43848 -> 127.0.0.1:27017
+      1 06/02/2026-13:39:36.042491  [**] [1:1000005:1] LOCAL MongoDB Access Attempt (exposed DB) [**] [Classification: (null)] [Priority: 3] {TCP} 127.0.0.1:43890 -> 127.0.0.1:27017
+      1 06/02/2026-13:39:57.485104  [**] [1:1000005:1] LOCAL MongoDB Access Attempt (exposed DB) [**] [Classification: (null)] [Priority: 3] {TCP} 127.0.0.1:43906 -> 127.0.0.1:27017
+      1 06/02/2026-13:39:35.901633  [**] [1:1000005:1] LOCAL MongoDB Access Attempt (exposed DB) [**] [Classification: (null)] [Priority: 3] {TCP} 127.0.0.1:43928 -> 127.0.0.1:27017
+      1 06/02/2026-13:39:57.485123  [**] [1:1000005:1] LOCAL MongoDB Access Attempt (exposed DB) [**] [Classification: (null)] [Priority: 3] {TCP} 127.0.0.1:43954 -> 127.0.0.1:27017
+      1 06/02/2026-13:39:57.485140  [**] [1:1000005:1] LOCAL MongoDB Access Attempt (exposed DB) [**] [Classification: (null)] [Priority: 3] {TCP} 127.0.0.1:44080 -> 127.0.0.1:27017
+      1 06/02/2026-13:39:57.487348  [**] [1:1000005:1] LOCAL MongoDB Access Attempt (exposed DB) [**] [Classification: (null)] [Priority: 3] {TCP} 127.0.0.1:44084 -> 127.0.0.1:27017
+      1 06/02/2026-13:39:57.487396  [**] [1:1000005:1] LOCAL MongoDB Access Attempt (exposed DB) [**] [Classification: (null)] [Priority: 3] {TCP} 127.0.0.1:44094 -> 127.0.0.1:27017
+      1 06/02/2026-13:39:57.485215  [**] [1:1000005:1] LOCAL MongoDB Access Attempt (exposed DB) [**] [Classification: (null)] [Priority: 3] {TCP} 127.0.0.1:44108 -> 127.0.0.1:27017
+      1 06/02/2026-13:39:57.485198  [**] [1:1000005:1] LOCAL MongoDB Access Attempt (exposed DB) [**] [Classification: (null)] [Priority: 3] {TCP} 127.0.0.1:44150 -> 127.0.0.1:27017
+      1 06/02/2026-13:39:57.487326  [**] [1:1000005:1] LOCAL MongoDB Access Attempt (exposed DB) [**] [Classification: (null)] [Priority: 3] {TCP} 127.0.0.1:44194 -> 127.0.0.1:27017
+      1 06/02/2026-13:39:35.595711  [**] [1:1000005:1] LOCAL MongoDB Access Attempt (exposed DB) [**] [Classification: (null)] [Priority: 3] {TCP} 127.0.0.1:44206 -> 127.0.0.1:27017
+      1 06/02/2026-13:39:57.485181  [**] [1:1000005:1] LOCAL MongoDB Access Attempt (exposed DB) [**] [Classification: (null)] [Priority: 3] {TCP} 127.0.0.1:44240 -> 127.0.0.1:27017
+      1 06/02/2026-13:39:36.225548  [**] [1:1000005:1] LOCAL MongoDB Access Attempt (exposed DB) [**] [Classification: (null)] [Priority: 3] {TCP} 127.0.0.1:51806 -> 127.0.0.1:27017
+      1 06/02/2026-13:39:57.485163  [**] [1:1000005:1] LOCAL MongoDB Access Attempt (exposed DB) [**] [Classification: (null)] [Priority: 3] {TCP} 127.0.0.1:51824 -> 127.0.0.1:27017
+      1 06/02/2026-13:39:57.487378  [**] [1:1000005:1] LOCAL MongoDB Access Attempt (exposed DB) [**] [Classification: (null)] [Priority: 3] {TCP} 127.0.0.1:51856 -> 127.0.0.1:27017
+      1 06/02/2026-13:39:37.891840  [**] [1:1000005:1] LOCAL MongoDB Access Attempt (exposed DB) [**] [Classification: (null)] [Priority: 3] {TCP} 127.0.0.1:54732 -> 127.0.0.1:27017
+      1 06/02/2026-13:39:36.907672  [**] [1:1000001:1] LOCAL SMB Lateral Movement Attempt (port 445) [**] [Classification: (null)] [Priority: 3] {TCP} 127.0.0.1:38331 -> 127.0.0.1:445
+
+--- Alert signature breakdown ---
+     24 LOCAL Suspicious HTTP Request
+     19 LOCAL MongoDB Access Attempt (exposed DB)
+      1 LOCAL SMB Lateral Movement Attempt (port 445)
+
+--- Sample named alerts ---
+06/02/2026-13:39:35.901633  [**] [1:1000005:1] LOCAL MongoDB Access Attempt (exposed DB) [**] [Classification: (null)] [Priority: 3] {TCP} 127.0.0.1:43928 -> 127.0.0.1:27017
+06/02/2026-13:39:36.042491  [**] [1:1000005:1] LOCAL MongoDB Access Attempt (exposed DB) [**] [Classification: (null)] [Priority: 3] {TCP} 127.0.0.1:43890 -> 127.0.0.1:27017
+06/02/2026-13:39:36.225548  [**] [1:1000005:1] LOCAL MongoDB Access Attempt (exposed DB) [**] [Classification: (null)] [Priority: 3] {TCP} 127.0.0.1:51806 -> 127.0.0.1:27017
+06/02/2026-13:39:35.595711  [**] [1:1000005:1] LOCAL MongoDB Access Attempt (exposed DB) [**] [Classification: (null)] [Priority: 3] {TCP} 127.0.0.1:44206 -> 127.0.0.1:27017
+06/02/2026-13:39:37.891840  [**] [1:1000005:1] LOCAL MongoDB Access Attempt (exposed DB) [**] [Classification: (null)] [Priority: 3] {TCP} 127.0.0.1:54732 -> 127.0.0.1:27017
+06/02/2026-13:39:36.907672  [**] [1:1000001:1] LOCAL SMB Lateral Movement Attempt (port 445) [**] [Classification: (null)] [Priority: 3] {TCP} 127.0.0.1:38331 -> 127.0.0.1:445
+06/02/2026-13:39:37.104655  [**] [1:1000005:1] LOCAL MongoDB Access Attempt (exposed DB) [**] [Classification: (null)] [Priority: 3] {TCP} 127.0.0.1:43794 -> 127.0.0.1:27017
+06/02/2026-13:39:37.254852  [**] [1:1000006:1] LOCAL Suspicious HTTP Request [**] [Classification: (null)] [Priority: 3] {TCP} 127.0.0.1:9099 -> 127.0.0.1:38744
+06/02/2026-13:39:37.255487  [**] [1:1000006:1] LOCAL Suspicious HTTP Request [**] [Classification: (null)] [Priority: 3] {TCP} 127.0.0.1:9099 -> 127.0.0.1:38744
+06/02/2026-13:39:37.255498  [**] [1:1000006:1] LOCAL Suspicious HTTP Request [**] [Classification: (null)] [Priority: 3] {TCP} 127.0.0.1:38744 -> 127.0.0.1:9099
+06/02/2026-13:39:37.255594  [**] [1:1000006:1] LOCAL Suspicious HTTP Request [**] [Classification: (null)] [Priority: 3] {TCP} 127.0.0.1:38744 -> 127.0.0.1:9099
+06/02/2026-13:39:37.255637  [**] [1:1000006:1] LOCAL Suspicious HTTP Request [**] [Classification: (null)] [Priority: 3] {TCP} 127.0.0.1:9099 -> 127.0.0.1:38744
+
+--- Engine summary ---
+ET Open ruleset: 50400 signatures + 6 local rules
+decoder.pkts                                                 | Total                     | 4349
+detect.alert                                                 | Total                     | 44
+[sudo: authenticate] Password: 

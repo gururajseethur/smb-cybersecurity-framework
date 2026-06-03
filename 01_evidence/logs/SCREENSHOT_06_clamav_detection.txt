@@ -1,0 +1,23 @@
+--- ClamAV signature database ---
+-rw-r--r-- 1 clamav clamav 276K Jun  2 13:38 /var/lib/clamav/bytecode.cvd
+-rw-r--r-- 1 clamav clamav  23M Jun  2 13:36 /var/lib/clamav/daily.cvd
+-rw-r--r-- 1 clamav clamav  85M Jun  2 13:38 /var/lib/clamav/main.cvd
+
+--- creating EICAR standard antivirus test file + clean control file ---
+
+--- scanning /tmp/scantest with ClamAV ---
+/tmp/scantest/invoice_clean.txt: OK
+/tmp/scantest/eicar.txt: Eicar-Test-Signature FOUND
+
+--- scan summary ---
+Known viruses: 3627865
+Engine version: 1.4.4
+Scanned directories: 1
+Scanned files: 2
+Infected files: 1
+Data scanned: 0.00 MB
+Data read: 0.00 MB (ratio 0.00:1)
+Time: 16.469 sec (0 m 16 s)
+Start Date: 2026:06:02 13:42:41
+End Date:   2026:06:02 13:42:58
+[sudo: authenticate] Password: 

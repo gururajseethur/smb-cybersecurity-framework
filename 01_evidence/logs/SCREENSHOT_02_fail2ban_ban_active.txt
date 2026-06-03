@@ -1,0 +1,50 @@
+Permission denied, please try again.
+Attempt 1 sent
+Permission denied, please try again.
+Attempt 2 sent
+Permission denied, please try again.
+Attempt 3 sent
+Permission denied, please try again.
+Attempt 4 sent
+Permission denied, please try again.
+Attempt 5 sent
+Permission denied, please try again.
+Attempt 6 sent
+Permission denied, please try again.
+Attempt 7 sent
+Permission denied, please try again.
+Attempt 8 sent
+
+---- Banning 127.0.0.1 via fail2ban-client set sshd banip ----
+1
+
+---- fail2ban-client status sshd ----
+Status for the jail: sshd
+|- Filter
+|  |- Currently failed:	0
+|  |- Total failed:	0
+|  `- File list:	/var/log/auth.log
+`- Actions
+   |- Currently banned:	1
+   |- Total banned:	1
+   `- Banned IP list:	127.0.0.1
+
+---- iptables f2b-sshd chain (the action that fail2ban inserts) ----
+Chain f2b-sshd (1 references)
+ pkts bytes target     prot opt in     out     source               destination         
+    0     0 REJECT     all  --  *      *       127.0.0.1            0.0.0.0/0            reject-with icmp-port-unreachable
+    3   120 RETURN     all  --  *      *       0.0.0.0/0            0.0.0.0/0           
+
+---- /var/log/auth.log: real SSH brute-force failures captured ----
+2026-06-02T13:30:00.750107+00:00 meridian-mgmt sshd-session[1514072]: Invalid user baduser from 127.0.0.1 port 36022
+2026-06-02T13:30:02.790473+00:00 meridian-mgmt sshd-session[1514072]: Failed password for invalid user baduser from 127.0.0.1 port 36022 ssh2
+2026-06-02T13:30:03.851789+00:00 meridian-mgmt sshd-session[1514747]: Invalid user baduser from 127.0.0.1 port 36032
+2026-06-02T13:30:05.606901+00:00 meridian-mgmt sshd-session[1514747]: Failed password for invalid user baduser from 127.0.0.1 port 36032 ssh2
+2026-06-02T13:30:06.957394+00:00 meridian-mgmt sshd-session[1515409]: Invalid user baduser from 127.0.0.1 port 36038
+2026-06-02T13:30:08.978795+00:00 meridian-mgmt sshd-session[1515409]: Failed password for invalid user baduser from 127.0.0.1 port 36038 ssh2
+2026-06-02T13:30:10.077839+00:00 meridian-mgmt sshd-session[1516456]: Invalid user baduser from 127.0.0.1 port 36052
+2026-06-02T13:30:11.782691+00:00 meridian-mgmt sshd-session[1516456]: Failed password for invalid user baduser from 127.0.0.1 port 36052 ssh2
+2026-06-02T13:30:13.172921+00:00 meridian-mgmt sshd-session[1516781]: Invalid user baduser from 127.0.0.1 port 50976
+2026-06-02T13:30:14.832519+00:00 meridian-mgmt sshd-session[1516781]: Failed password for invalid user baduser from 127.0.0.1 port 50976 ssh2
+2026-06-02T13:30:16.298264+00:00 meridian-mgmt sshd-session[1517777]: Invalid user baduser from 127.0.0.1 port 50986
+2026-06-02T13:30:18.755653+00:00 meridian-mgmt sshd-session[1517777]: Failed password for invalid user baduser from 127.0.0.1 port 50986 ssh2
